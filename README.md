@@ -1,6 +1,7 @@
 # lapa-mrp
 The system submission "LAPA" of our team *Amazon* for MRP Shared Task
 
+```
 @inproceedings{Cao:Zha:Sri:19,
   author = {Cao, Jie and Zhang, Yi and Youssef, Adel and Srikumar, Vivek},
   title = {Amazon at {MRP}~2019:
@@ -11,3 +12,4 @@ The system submission "LAPA" of our team *Amazon* for MRP Shared Task
   pages = {\pages{--}{??}{??}},
   year = 2019
 }
+```
