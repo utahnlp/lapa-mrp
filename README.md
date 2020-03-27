@@ -115,7 +115,7 @@ popd
  This script will generate a pickle file with some dictionaries as the input for our model, which will be stored at `Expt/data/mrp-data/${sub_name}`.
  ${sub_name} is any unique name to identify the preporocessing setting. For example, you can store "amr_bert_large_uncased" and "amr_bert_large_cased" for different tokenization.
 
-For DM and PSD, we also provide the following scripts for preprocessingA, we also partially support EDS preprocessing and parsing in our lexical-anchoring framework, but the main code of it are still under developing.
+For DM and PSD, we also provide the following scripts for preprocessing, we also partially support EDS preprocessing and parsing in our lexical-anchoring framework, but the main code of it are still under developing.
 ```bash
 pushd Expt/mrp__scripts/commands
 ./dm_preprocessing.sh ${sub_name}
@@ -163,7 +163,7 @@ popd
 `${config_file}` is the path of config file. All the config files are listed in `mrp_scripts/configs/`, more details for the configuration file, please see the comments in the configure file for more details. ${frame} is the value in mtools, which are amr, dm, psd, ucca, eds.
 
 
-For UCCA training, we use the offshelf [consistutent tree parser](https://github.com/nikitakit/self-attentive-parser), the submitted version is using the ELMo-based self-attentive encoder. We only offer the preprocessing code used in the above preprocessing steps. For training steps, please refer to t
+For UCCA training, we use the off-the-shelf [consistutent tree parser](https://github.com/nikitakit/self-attentive-parser), the submitted version is using the ELMo-based self-attentive encoder. We only offer the preprocessing code used in the above preprocessing steps. For training steps, please refer to t
 he original repo for details.
 
 
