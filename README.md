@@ -125,6 +125,16 @@ pushd Expt/mrp__scripts/commands
 popd
 ```
 
+
+| MR      | config_file         | Ours((P/R/F1) | MRP TOP1/3/5(F1)  |
+|---------|---------------------|---------------|-------------------|
+| AMR(1)  | [LatentAlignment+charEmb](Expt/mrp_scripts/configs/base_amr/base_t1_amr_ori_char.sh)                    | 75/71/73.38   | 72.94/71.97/71.72 |
+| PSD(6)  | [ExplicitAlignment+charEmb](Expt/mrp_scripts/configs/base_psd/base_t1_psd_char.sh)                    | 89/89/88.75   | 90.76/89.91/88.77 |
+| DM(7)   | [ExplicitAlignment+charEmb](Expt/mrp_scripts/configs/base_dm/base_t1_dm_char.sh)                   | 93/92/92.14   | 94.76/94.32/93.74 |
+| UCCA(5) | ELMo-self-attentive | 76/68/71.65   | 81.67/77.80/73.22 |
+| EDS     | N/A                 | N/A           | 94.47/90.75/89.10 |
+
+
 For UCCA, we use the phrasal-anchoring framework. We first transform a UCCA graph into a PTB tree, then we use the offshelf [consistutent tree parser](https://github.com/nikitakit/self-attentive-parser)  to parse the PTB, finally we transform it back to UCCA. Hence, the preprocessing for UCCA is mainly to transform them into PTB tree. Hence, the preprocessing for UCCA has the following two steps:
 
 ```bash
