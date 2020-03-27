@@ -1,0 +1,103 @@
+#!/usr/bin/env python3.6
+# coding=utf-8
+'''
+
+This reader reads all psd vallex file,
+and add possible cannonical vallex lemma
+to the corresponding copying dictionary of a word and aliases of the word
+
+@author: Jie Cao(jiessie.cao@gmail.com)
+@since: 2019-06-28
+'''
+
+import xml.etree.ElementTree as ET
+from utility.psd_utils.PSDGraph import *
+from utility.data_helper import folder_to_files_path
+import logging
+
+logger = logging.getLogger("mrp.psd")
+logger.setLevel(logging.INFO)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)
+console_handler.setFormatter(formatter)
+logger.addHandler(console_handler)
+
+def add_concept(lemmas_to_concept,le,con):
+
+    if not le in lemmas_to_concept:
+        lemmas_to_concept[le]= set([con])
+    else:
+        lemmas_to_concept[le].add(con)
+
+class VallexReader:
+    def parse(self):
+        """
+        parse all the psd vallex frames
+        """
+        # for every word key, there is a set of frames
+        self.frames = dict()
+        self.non_sense_frames = dict()
+        self.frame_lemmas = set()
+        self.joints = set()
+        # for psd, only one file extised for vallex lexicon
+        for f in self.frame_files_path:
+            self.parse_file(f)
+
+    def __init__(self, folder_path=frame_folder_path):
+        self.frame_files_path = folder_to_files_path(folder_path,".xml")
+        self.parse()
+
+    def parse_file(self,f):
+        tree = ET.parse(f)
+        root = tree.getroot()
+        for child in root:
+            if child.tag == "body":
+                # iterate every word
+                for wordChild in child:
+                    self.add_lemma(wordChild)
+
+    def add_lemma(self,node):
+        """
+        add cannonical amr lemma to possible set of words including for aliases of the words
+        adding the Frame into lemma mapping
+        """
+        # heat_up is underscore for psd, 20088019
+        lemma =  node.attrib["lemma"]
+        word_id = node.attrib["id"]
+        self.frame_lemma.add(lemma)
+        self.frames.setdefault(lemma,set())
+        # frame id is attaching some suffix frame id after word_id, {word_id}
+        # we don't classify sense_id, just use a mapping here.
+        # POS can be ignored, most of them are V,
+        # 11 POS="A"
+        # 5 POS="M"
+        # 1 POS="N"
+        # 4337 POS="V"
+        if len(lemma.split("_")) == 2:
+            k,v = role.le.split("_")
+            self.joints.add((k,v))
+    #    self.frames[lemma] = set()
+        for child in node:
+            if child.tag == "valency_frames":
+                for frameChild in child:
+                    if frame.tag == "frame":
+                        frame_id = frame.attrib["id"]
+                        # we can use the whole thing as sense
+                        sense = frame_id
+                        role = PSDUniversal(pos,lemma,sense)
+                        add_concept(self.frames,lemma,role)
+
+    def get_frames(self):
+        return self.frames
+
+def main():
+    f_r = VallexReader(folder_path=)
+    for k,v in f_r.joints:
+        logger.info(k+" "+v)
+
+    logger.info("len(self.frame_lemma)={}".format(len(self.frame_lemma)))
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,36 @@
+# for java
+*.class
+
+
+*.tgz
+
+# for python
+*.pyc
+**/__pycache__/
+.python-version
+
+# for project
+**/model/
+**/stanford-corenlp-full-2018-10-05
+**/workdirs/
+**/workdirs
+**/workdirs_1/
+**/data/
+**/bak/
+**/backup/
+*.log
+**/pre_logs/
+
+# for emacs
+.projectile
+\#*\#
+.\#*
+.flake8
+.dir-locals.el
+*.diff
+
+# for vim
+*.swp
+
+# for mac
+.

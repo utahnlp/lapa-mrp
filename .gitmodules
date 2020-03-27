@@ -1,0 +1,4 @@
+[submodule "utility/mtool"]
+	path = utility/mtool
+	url = git@github.com:cfmrp/mtool.git
+	branch = master

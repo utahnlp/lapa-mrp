@@ -1,0 +1,23 @@
+#!/bin/bash
+# source environment
+. ./env.sh
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+sub_name=$1
+
+BUILD_DIR=$ROOT_DIR/Expt/data/mrp_data/$sub_name/
+
+### TRAIN for task1
+pargs="
+--suffix=.mrp_ucca \
+--companion_suffix=.mrp_conllu_pre_processed \
+--build_folder=${BUILD_DIR} \
+"
+# to lower case toggle this
+#--do_lower_case=x
+
+pushd $ROOT_DIR
+python src/ucca_tree_build.py $pargs &> $ROOT_DIR/Expt/pre_logs/ucca_tree_build_${sub_name}.log
+popd
+
