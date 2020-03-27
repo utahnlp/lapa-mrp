@@ -1,5 +1,8 @@
-# MRP shared task
-This repo is our system submission to MRP 2019 shared task: LAPA-MRP. Our model ranked 1st in the AMR subtask, 5th in UCCA, 6th in PSD and  7th in DM.
+# LAPA-MRP
+
+******************
+
+This repo is our system submission to MRP 2019 shared task at CoNLL 2019: LAPA-MRP. Our model ranked 1st in the AMR subtask, 5th in UCCA, 6th in PSD and  7th in DM.
 Please cite our paper [Amazon at MRP 2019: Parsing Meaning Representation with Lexical and Phrasal Anchoring](https://www.aclweb.org/anthology/K19-2013/) when using the code.
 
 ```
@@ -30,7 +33,7 @@ Please cite our paper [Amazon at MRP 2019: Parsing Meaning Representation with L
 
    ```bash
    pyenv install 3.6.5
-   # in our default setting, we use `pyenv activate py2.7_tf1.4` to
+   # in our default setting, we use `pyenv activate py3.6.5_torch` to
    # activate the envivronment, please change this according to your preference.
 
    pyenv virtualenv 3.6.5 py3.6.5_torch
@@ -52,6 +55,7 @@ Please cite our paper [Amazon at MRP 2019: Parsing Meaning Representation with L
 ### Data placement
 
  - MRP 2019 dataset download and placement
+
  Download all the mrp datasets into `Expt/data/mrp_data_ro/download/mrp_data/`
 
 Then unzip it in place, it will generate a folder into `Expt/data/mrp_data_ro/download/mrp_data/mrp_data/`
@@ -153,14 +157,16 @@ For UCCA training, we use the offshelf [consistutent tree parser](https://github
 he original repo for details.
 
 
-## Code and Contribution Guidelines
+# Code and Contribution Guidelines
 
-### `src`
+******************
+
+## `src`
 
 This folder stores the source code for all the commands which can be directly launched. When you want to add a specific command, then just add it here.
 It may call other commands or modules in the other folders.
 
-### `parser`
+## `parser`
 
 This folder contains the core code for parsing. For each task, it must have the following code:
 
@@ -185,6 +191,6 @@ Hence, it require to implement the modules like `XXXRootEncoder`, `XXXRelEEncode
 - `modules`: some helper like bert utils, char_utils, GumbelSoftmax utils, and all kinds of encoders.
 
 
-### `utility`
+## `utility`
 
 This folder contains all the utils for different meaning representations. Each of them are stored in the `${frame}_utils` folder.
