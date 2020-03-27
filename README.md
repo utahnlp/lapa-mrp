@@ -58,8 +58,8 @@ Please cite our paper [Amazon at MRP 2019: Parsing Meaning Representation with L
 
  Download all the mrp datasets into `Expt/data/mrp_data_ro/download/mrp_data/`
 
-Then unzip it in place, it will generate a folder into `Expt/data/mrp_data_ro/download/mrp_data/mrp_data/`
-The all related files for mrp2019 will be stored in the mrp folder as the original folder structure as follows:
+Then unzip it in place, it will generate a folder into `Expt/data/mrp_data_ro/download/mrp_data/mrp_data/` 
+All related files for mrp2019 will be stored in the mrp folder as the original folder structure as follows:
 
 ```
 mrp
