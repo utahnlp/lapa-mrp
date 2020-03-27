@@ -194,7 +194,7 @@ Hence, it require to implement the modules like `XXXRootEncoder`, `XXXRelEEncode
 
 - `DataIterator.py` is the dataset utils for wrap prepared dataset into inputs
 
-- `BertDataiterator.py` is the dataset utils for Bert preprocessed dataset, the main difference is the token2index map, which are required to tranform bert tokenization back to the original token
+- `BertDataIterator.py` is the dataset utils for Bert preprocessed dataset, the main difference is the token2index map, which are required to tranform bert tokenization back to the original token
 
 - `Optim.py`: all about the optimization
 
