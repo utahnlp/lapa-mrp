@@ -131,7 +131,7 @@ popd
 | AMR(1)  | [LatentAlignment+charEmb](Expt/mrp_scripts/configs/base_amr/base_t1_amr_ori_char.sh)                    | 75/71/73.38   | 72.94/71.97/71.72 |
 | PSD(6)  | [ExplicitAlignment+charEmb](Expt/mrp_scripts/configs/base_psd/base_t1_psd_char.sh)                    | 89/89/88.75   | 90.76/89.91/88.77 |
 | DM(7)   | [ExplicitAlignment+charEmb](Expt/mrp_scripts/configs/base_dm/base_t1_dm_char.sh)                   | 93/92/92.14   | 94.76/94.32/93.74 |
-| UCCA(5) | ELMo-self-attentive | 76/68/71.65   | 81.67/77.80/73.22 |
+| UCCA(5) | [ELMo-self-attentive](https://github.com/nikitakit/self-attentive-parser) | 76/68/71.65   | 81.67/77.80/73.22 |
 | EDS     | N/A                 | N/A           | 94.47/90.75/89.10 |
 
 
