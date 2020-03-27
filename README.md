@@ -108,7 +108,7 @@ You can specify our ids as input to generate the training/dev/test splits, other
 For AMR, we first provide a script `amr_prep_rules_data.sh`, which includes `preprocessing_amr.sh`, `amr_rule_system_build.sh`, and `amr_data_build.sh`.
 
 ```bash
-pushd Expt/mrp__scripts/commands
+pushd Expt/mrp_scripts/commands
 ./amr_prep_rules_data.sh ${sub_name}
 popd
 ```
@@ -117,7 +117,7 @@ popd
 
 For DM and PSD, we also provide the following scripts for preprocessing, we also partially support EDS preprocessing and parsing in our lexical-anchoring framework, but the main code of it are still under developing.
 ```bash
-pushd Expt/mrp__scripts/commands
+pushd Expt/mrp_scripts/commands
 ./dm_preprocessing.sh ${sub_name}
 ./dm_prep_rules_data.sh ${sub_name}
 ./psd_preprocessing.sh ${sub_name}
