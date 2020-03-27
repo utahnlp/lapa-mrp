@@ -1,5 +1,5 @@
 # MRP shared task
-This repo is the code for our submission to MRP 2019 shared task. Our model ranked 1st in the AMR subtask, 5th in UCCA, 6th in PSD and  7th in DM.
+This repo is our system submission to MRP 2019 shared task: LAPA-MRP. Our model ranked 1st in the AMR subtask, 5th in UCCA, 6th in PSD and  7th in DM.
 Please cite our paper [Amazon at MRP 2019: Parsing Meaning Representation with Lexical and Phrasal Anchoring](https://www.aclweb.org/anthology/K19-2013/) when using the code.
 
 ```
