@@ -180,7 +180,7 @@ It may call other commands or modules in the other folders.
 
 This folder contains the core code for parsing. For each task, it must have the following code:
 
-- `XXXProcessors.py`: this file include all the preprocessing, post processing, parser class,  such as `XXXInputPreprocessor` which add lem, ner, pos to the input dataset; `XXXDecoder`, which decoder the concepts, relations with the probabilities, and then connect them into a graph; `XXXParser` is a class for evaluation and command usage, initialize a parser with a model, which can directly parse a sentence into a graph, which is useful for evaluation, an API or demo.
+- `XXXProcessors.py`: this file include all the preprocessing, post processing, parser class,  such as `XXXInputPreprocessor` which adds lem, ner, pos to the input dataset; `XXXDecoder`, which decodes the concepts, relations with the probabilities, and then connects them into a graph; `XXXParser` is a class for evaluation and command usage, initialize a parser with a model, which can directly parse a sentence into a graph, which is useful for evaluation, an API or demo.
 
 
 - `models/XXXConceptModel.py`: It is the concept identification model in graph-based parsing. In each file, a pytorch module called XXX_Concept_Classifier should be implemented. 
