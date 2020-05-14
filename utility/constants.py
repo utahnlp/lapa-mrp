@@ -8,6 +8,7 @@ allFolderPath = os.path.expanduser('~')+"/git-workspace/amr_data/e25/data/alignm
 #allFolderPath = os.path.expanduser('~')+"/git-workspace/learnlab/data/e25/data/amrs/split/"
 resource_folder_path  = os.path.expanduser('~')+"/git-workspace/amr_data/e25/"
 frame_folder_path = resource_folder_path+"/data/frames/propbank-frames-xml-2016-03-08/"
+# the following files are in the utility/resources folder
 vallex_file_path = os.path.expanduser('~')+"/git-workspace/mrp_data/vallex_en.xml"
 semi_folder_path = os.path.expanduser('~')+"/git-workspace/mrp_data/1214/etc/"
 dm_mwe_file= os.path.expanduser('~')+"/git-workspace/mrp_data/dm.joints"
