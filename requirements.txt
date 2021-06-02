@@ -82,7 +82,7 @@ python-jose==3.0.1
 pytorch-pretrained-bert==0.6.2
 pytorch-transformers==1.1.0
 pytz==2019.1
-PyYAML==5.1
+PyYAML==5.4
 regex==2019.4.14
 requests==2.21.0
 responses==0.10.6
