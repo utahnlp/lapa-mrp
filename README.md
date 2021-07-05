@@ -47,7 +47,7 @@ Please cite our paper [Amazon at MRP 2019: Parsing Meaning Representation with L
    ```
    `src` and `parser` folder is the source code directory for nerual models.
 
-   `Expt` folder is a folder for experiment managing, which includes all the commands(Expt/mrp_scripts/commands), config files(Expt/mrp_scripts/configs) to launch the experiments, and store all experiment outputs. In this repo, except `Expt/mrp_scirpts/commands/env.sh` contains the global variables, all model hyperparameters and reltaed configurations will be assigned in the config files in Expt/mrp_scripts/configs, each of them is corresponding to a model. For a detailed description for folders in `Expt` folder, please refer to [Expt README file](Expt/README.md)
+   `Expt` folder is a folder for experiment managing, which includes all the commands(Expt/mrp_scripts/commands), config files(Expt/mrp_scripts/configs) to launch the experiments, and store all experiment outputs. In this repo, except `Expt/mrp_scirpts/commands/env.sh` contains the global variables, all model hyperparameters and reltaed configurations will be assigned in the config files in Expt/mrp_scripts/configs, each of them is corresponding to a model. For a detailed description for the required subfolders in `Expt` folder, please manually creat them according to [Expt README file](Expt/README.md).
 
 
 ## Data Preparing

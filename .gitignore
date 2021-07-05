@@ -19,7 +19,6 @@
 **/bak/
 **/backup/
 *.log
-**/pre_logs/
 
 # for emacs
 .projectile

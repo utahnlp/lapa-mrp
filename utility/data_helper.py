@@ -12,7 +12,7 @@ Some helper functions for storing and reading data
 '''
 import json,os,re
 import pickle
-from utility.top_utils.tree import *
+# from utility.top_utils.tree import *
 from utility.mtool.graph import *
 from utility.mtool.codec.mrp import read as mrp_read
 
@@ -282,34 +282,34 @@ def mergeWithAnnotatedGraphs(input_dict, filepaths):
                     n = n+1
     return n
 
-
-def load_top_dataset(filepaths, dataset_name):
-    tree_dataset = {}
-    i = 0
-    for filepath in filepaths :
-        with open(filepath, "r") as fin, open(filepath+".bak", "w+") as fout:
-            for tsv_line in fin:
-                lines = tsv_line.split('\t')
-                if len(lines) == 3:
-                    snt = lines[0]
-                    tokenized_snt = lines[1]
-                    i = i +1
-                    tree = Tree(lines[2])
-                    tree_dataset[dataset_name+"_"+ str(i)] = {"input": tokenized_snt, "tree": tree}
-                elif len(lines) == 5:
-                    new_lines = []
-                    snt = lines[2]
-                    tokenized_snt = lines[2]
-                    tree_str = lines[4].rstrip('\n')
-                    tree = Tree(tree_str)
-                    i = i +1
-                    new_lines.append(lines[2])
-                    new_lines.append(lines[2])
-                    new_lines.append(tree_str)
-                    tree_dataset[dataset_name+"_"+ str(i)] = {"input": tokenized_snt, "tree": tree}
-                    fout.write("\t".join(new_lines))
-                    fout.write("\n")
-                else:
-                    print("tsv_line:{}".format(lines))
-
-    return tree_dataset
+#
+#def load_top_dataset(filepaths, dataset_name):
+#    tree_dataset = {}
+#    i = 0
+#    for filepath in filepaths :
+#        with open(filepath, "r") as fin, open(filepath+".bak", "w+") as fout:
+#            for tsv_line in fin:
+#                lines = tsv_line.split('\t')
+#                if len(lines) == 3:
+#                    snt = lines[0]
+#                    tokenized_snt = lines[1]
+#                    i = i +1
+#                    tree = Tree(lines[2])
+#                    tree_dataset[dataset_name+"_"+ str(i)] = {"input": tokenized_snt, "tree": tree}
+#                elif len(lines) == 5:
+#                    new_lines = []
+#                    snt = lines[2]
+#                    tokenized_snt = lines[2]
+#                    tree_str = lines[4].rstrip('\n')
+#                    tree = Tree(tree_str)
+#                    i = i +1
+#                    new_lines.append(lines[2])
+#                    new_lines.append(lines[2])
+#                    new_lines.append(tree_str)
+#                    tree_dataset[dataset_name+"_"+ str(i)] = {"input": tokenized_snt, "tree": tree}
+#                    fout.write("\t".join(new_lines))
+#                    fout.write("\n")
+#                else:
+#                    print("tsv_line:{}".format(lines))
+#
+#    return tree_dataset
